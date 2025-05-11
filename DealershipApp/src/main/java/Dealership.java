@@ -11,8 +11,22 @@ public class Dealership {
         this.address = address;
         this.phone = phone;
         inventory=new ArrayList<>();
+
     }
-    public ArrayList<Vehicle> getVehiclesByPrice(double min,double max){
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public ArrayList<Vehicle> getVehiclesByPrice(double min, double max){
         return null;
     }
     public ArrayList<Vehicle> getVehiclesByMakeModel(String make,String model){
