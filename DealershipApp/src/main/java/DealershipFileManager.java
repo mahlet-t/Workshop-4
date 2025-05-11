@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.Writer;
-
 public class DealershipFileManager {
     public static Dealership getDealership(){
         Dealership dealership=null;
@@ -51,6 +49,5 @@ public class DealershipFileManager {
         }
 
     }
-
 
 }

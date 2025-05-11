@@ -3,7 +3,7 @@ public class Vehicle {
     private int year;
     private String make;
     private String model;
-    private String VehicleType;
+    private String vehicleType;
     private String color;
     private int odometer;
     private double price;
@@ -13,7 +13,7 @@ public class Vehicle {
         this.year = year;
         this.make = make;
         this.model = model;
-        this.VehicleType = vehicleType;
+        this.vehicleType = vehicleType;
         this.color = color;
         this.odometer = odometer;
         this.price = price;
@@ -52,11 +52,11 @@ public class Vehicle {
     }
 
     public String getVehicleType() {
-        return VehicleType;
+        return vehicleType;
     }
 
     public void setVehicleType(String vehicleType) {
-        VehicleType = vehicleType;
+        vehicleType = vehicleType;
     }
 
     public String getColor() {
@@ -81,5 +81,8 @@ public class Vehicle {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+    public String toString() {
+        return (vin + "|" + year + "|" + make + "|" + model + "|" + vehicleType + "|" + color + "|" + odometer + "|" + price);
     }
 }
