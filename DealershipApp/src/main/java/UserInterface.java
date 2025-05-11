@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class UserInterface {
 
     private Dealership dealership;
-    private Scanner input=new Scanner(System.in);
+    private final Scanner input=new Scanner(System.in);
     public void init(){
          dealership=DealershipFileManager.getDealership();
     }
@@ -146,6 +146,7 @@ public void processAddVehicleRequest(){
 
     Vehicle vehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
     dealership.addVehicle(vehicle);
+    DealershipFileManager.saveDealership(dealership);
     System.out.println("Vehicle added successfully!");
 }
 public void processRemoveVehicleRequest(){
@@ -157,6 +158,7 @@ public void processRemoveVehicleRequest(){
         for (Vehicle v : inventory) {
             if (v.getVin() == vinToRemove) {
                 dealership.removeVehicle(v);
+                DealershipFileManager.saveDealership(dealership);
                 System.out.println("Vehicle removed successfully.");
                 return;
             }

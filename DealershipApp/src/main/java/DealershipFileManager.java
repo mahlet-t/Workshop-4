@@ -35,10 +35,10 @@ public class DealershipFileManager {
     }
     public static void saveDealership(Dealership dealership){
         try {
-            FileWriter writer=new FileWriter("C:/Users/mahle/pluralsight/Workshop-4/DealershipApp/data/inventory.csv",true);
-            writer.write(dealership.getName()+"|"+dealership.getAddress()+"|"+dealership.getPhone());
+            FileWriter writer=new FileWriter("C:/Users/mahle/pluralsight/Workshop-4/DealershipApp/data/inventory.csv");
+            writer.write(dealership.getName()+"|"+dealership.getAddress()+"|"+dealership.getPhone()+"\n");
             for (Vehicle v: dealership.getAllVehicles()){
-                writer.write(v.getVin()+"|"+ v.getYear()+"|"+v.getMake()+"|"+v.getModel()+"|"+v.getVehicleType()+"|"+v.getColor()+"|"+v.getOdometer()+"|"+v.getPrice());
+                writer.write(v.getVin()+"|"+ v.getYear()+"|"+v.getMake()+"|"+v.getModel()+"|"+v.getVehicleType()+"|"+v.getColor()+"|"+v.getOdometer()+"|"+v.getPrice()+"\n");
             }
             writer.close();
 
