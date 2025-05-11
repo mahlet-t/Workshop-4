@@ -5,7 +5,7 @@ public class DealershipFileManager {
     public static Dealership getDealership(){
         Dealership dealership=null;
         try {
-            BufferedReader reader=new BufferedReader(new FileReader("../inventory.csv"));
+            BufferedReader reader=new BufferedReader(new FileReader("C:/Users/mahle/pluralsight/Workshop-4/DealershipApp/data/inventory.csv"));
        String headerLine= reader.readLine();
        String[] headerParts=headerLine.split("\\|");
        String name=headerParts[0];
@@ -35,7 +35,7 @@ public class DealershipFileManager {
     }
     public static void saveDealership(Dealership dealership){
         try {
-            FileWriter writer=new FileWriter("../inventory.csv",true);
+            FileWriter writer=new FileWriter("C:/Users/mahle/pluralsight/Workshop-4/DealershipApp/data/inventory.csv",true);
             writer.write(dealership.getName()+"|"+dealership.getAddress()+"|"+dealership.getPhone());
             for (Vehicle v: dealership.getAllVehicles()){
                 writer.write(v.getVin()+"|"+ v.getYear()+"|"+v.getMake()+"|"+v.getModel()+"|"+v.getVehicleType()+"|"+v.getColor()+"|"+v.getOdometer()+"|"+v.getPrice());
